@@ -5,8 +5,15 @@ Este proyecto realiza un análisis comparativo de las tasas de empleo y desemple
 ## Estructura del Proyecto
 
 
-print(f"Archivo '{output_path}' creado con éxito en la carpeta actual.")
-print("Puedes editarlo con Word y subirlo a GitHub.")
+Proyecto-final/ │
+├── DATA/ 
+│ ├── Tasa de empleo.csv # Datos de tasa de empleo 
+│ └── Tasa de desempleo.csv # Datos de tasa de empleo 
+│ ├── analisis_empleo_desempleo.py # Script principal de análisis
+├── datos_combinados_empleo_desempleo.csv # Salida: Datos combinados 
+├── resumen_analisis.txt # Salida: Resumen estadístico 
+├── requisitos.txt # Dependencias del proyecto 
+└── README.md # Este archivo
 
 ## Características del Análisis
 
