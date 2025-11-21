@@ -53,7 +53,8 @@ venv\Scripts\activate     # Windows
 3. Isntalar dependencias
 pip install -r requirements.txt
 4. Realizar análisis de datos obtenidos
-Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias. Observamos las siguiente tendencias princiapales
+Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias. 
+Observamos las siguiente tendencias princiapales
 
 
 España : Mayor volatilidad en ambas tasas
