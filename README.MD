@@ -92,7 +92,5 @@ Autor
 Daniel - https://github.com/relojius
 Licencia
 Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
-Soporte
-Si tienes preguntas o encuentras algún problema:
 
-Contacto: relojius@gmail.com
+
