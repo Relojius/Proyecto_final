@@ -36,7 +36,13 @@ print("Puedes editarlo con Word y subirlo a GitHub.")
 - **Matplotlib**: Visualizaciones básicas
 - **Seaborn**: Visualizaciones estadísticas
 ##  Instalación y Uso
-
+Requisitos de sistema
+pandas>=1.3.0
+numpy>=1.21.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+Resultados Destacados
+Tendencias Principales
 ```bash
 1. Clonar el repositorio
 git clone https://github.com/relojius/proyecto_final.git
@@ -47,14 +53,8 @@ venv\Scripts\activate     # Windows
 3. Isntalar dependencias
 pip install -r requirements.txt
 4. Realizar análisis de datos obtenidos
-Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias.
-Requisitos de sistema
-pandas>=1.3.0
-numpy>=1.21.0
-matplotlib>=3.4.0
-seaborn>=0.11.0
-Resultados Destacados
-Tendencias Principales
+Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias. Observamos las siguiente tendencias princiapales
+
 
 España : Mayor volatilidad en ambas tasas
 Unión Europea : Mayor estabilidad y tendencia constante
