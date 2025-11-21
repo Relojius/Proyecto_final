@@ -1,159 +1,89 @@
-# crear_readme.py
-# Este script crea un archivo README.docx para tu proyecto
+# 📊 Análisis de Tasas de Empleo y Desempleo: España vs Unión Europea (2006-2024)
 
-from docx import Document
-from docx.shared import Inches, Pt
-from docx.enum.text import WD_ALIGN_PARAGRAPH
-from docx.enum.style import WD_STYLE_TYPE
-import os
+Este proyecto realiza un análisis comparativo de las tasas de empleo y desempleo entre España y la Unión Europea desde 2006 hasta 2024, utilizando Python para el procesamiento de datos y la visualización.
 
-# Crear un nuevo documento
-doc = Document()
+## 📁 Estructura del Proyecto
 
-# === Portada ===
-title = doc.add_heading('Análisis de Tasas de Empleo y Desempleo', 0)
-title.alignment = WD_ALIGN_PARAGRAPH.CENTER
 
-subtitle = doc.add_paragraph('España vs Unión Europea (2006-2024)')
-subtitle.alignment = WD_ALIGN_PARAGRAPH.CENTER
-doc.add_paragraph('')
+print(f"Archivo '{output_path}' creado con éxito en la carpeta actual.")
+print("Puedes editarlo con Word y subirlo a GitHub.")
 
-# Añadir separador
-doc.add_paragraph('')  # Espacio
-doc.add_paragraph('-' * 60).alignment = WD_ALIGN_PARAGRAPH.CENTER
-doc.add_paragraph('')  # Espacio
+## Características del Análisis
 
-# Información del autor
-author = doc.add_paragraph()
-author.add_run('Autor: ').bold = True
-author.add_run('Daniel')
-doc.add_paragraph('Curso: Data Analyst')
-doc.add_paragraph('Fecha: ' + __import__('datetime').datetime.now().strftime('%d/%m/%Y'))
+### Procesamiento de Datos
+- **Combinación de datasets**: Unificación de datos de empleo y desempleo
+- **Limpieza de datos**: Conversión de formatos (coma decimal a punto decimal)
+- **Validación de datos**: Manejo de valores inconsistentes o faltantes
 
-doc.add_page_break()
+### Análisis Realizado
+- **Estadísticas descriptivas**: Media, desviación estándar, mínimos y máximos
+- **Análisis comparativo**: España vs Unión Europea
+- **Correlaciones**: Relación entre empleo y desempleo
+- **Tendencias temporales**: Evolución 2006-2024
 
-# === Índice ===
-doc.add_heading('📌 Índice', level=1)
-index = [
-    "Estructura del Proyecto",
-    "Características del Análisis",
-    "Tecnologías Utilizadas",
-    "Instalación y Uso",
-    "Resultados Destacados",
-    "Datos de Entrada y Salida",
-    "Autor",
-    "Licencia"
-]
-for item in index:
-    doc.add_paragraph(item, style='List Bullet')
+### Visualizaciones Generadas
+1. Evolución del empleo y desempleo en España
+2. Evolución del empleo y desempleo en la UE
+3. Comparativa España vs UE (empleo)
+4. Comparativa España vs UE (desempleo)
+5. Diferencias absolutas entre España y UE
 
-doc.add_page_break()
+## Tecnologías Utilizadas
 
-# === Secciones del README ===
-sections = [
-    ("📁 Estructura del Proyecto", """
-Proyecto-final/
-│
-├── DATA/
-│   ├── Tasa de empleo.csv          # Datos de tasa de empleo
-│   └── Tasa de desempleo.csv       # Datos de tasa de desempleo
-│
-├── analisis_empleo_desempleo.py    # Script principal de análisis
-├── datos_combinados_empleo_desempleo.csv  # Datos combinados
-├── resumen_analisis.txt            # Resumen estadístico
-├── requirements.txt                # Dependencias
-└── README.md                       # Este archivo
-    """),
-
-    ("🚀 Características del Análisis", """
-- **Combinación de datasets**: Unificación de empleo y desempleo
-- **Limpieza de datos**: Conversión de comas decimales a puntos
-- **Estadísticas descriptivas**: Media, desviación, máximos y mínimos
-- **Visualizaciones**: 5 gráficos comparativos
-- **Análisis de diferencias**: España vs UE
-- **Correlaciones**: Entre empleo y desempleo
-    """),
-
-    ("🛠️ Tecnologías Utilizadas", """
 - **Python 3.8+**
-- **Pandas**: Manipulación de datos
+- **Pandas**: Manipulación y análisis de datos
 - **NumPy**: Cálculos numéricos
-- **Matplotlib & Seaborn**: Gráficos
-- **Docx**: Generación de este documento
-    """),
+- **Matplotlib**: Visualizaciones básicas
+- **Seaborn**: Visualizaciones estadísticas
+##  Instalación y Uso
 
-    ("⚙️ Instalación y Uso", """
-1. Clonar el repositorio:
-   git clone https://github.com/tu-usuario/empleo-desempleo-espana-ue.git
-   cd empleo-desempleo-espana-ue
+### 1. Clonar el repositorio
+```bash
+git clone https://github.com/relojius/proyecto_final.git
+cd empleo-desempleo-espana-ue
+### 2. Crear entorno virtual
+python -m venv venv
+venv\Scripts\activate     # Windows
+### 3. Isntalar dependencias
+pip install -r requirements.txt
+### 4. Realizar análisis de datos obtenidos
+Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias.
+### Requisitos de sistema
+pandas>=1.3.0
+numpy>=1.21.0
+matplotlib>=3.4.0
+seaborn>=0.11.0
+Resultados Destacados
+Tendencias Principales
 
-2. Crear entorno virtual:
-   python -m venv venv
-   venv\\Scripts\\activate  # Windows
-   source venv/bin/activate # Linux/Mac
+España : Mayor volatilidad en ambas tasas
+Unión Europea : Mayor estabilidad y tendencia constante
+Brecha España-UE : Diferencia significativa en periodos de crisis
 
-3. Instalar dependencias:
-   pip install -r requirements.txt
+Puntos Clave
 
-4. Ejecutar el análisis:
-   python analisis_empleo_desempleo.py
-    """),
+Máximo desempleo España : 26,1% (2013)
+Mínimo desempleo España : 8,2% (2007)
+Brecha empleo España-UE : Promedio -3.3 puntos
+Brecha desempleo España-UE : Promedio +5.8 puntos
 
-    ("📊 Resultados Destacados", """
-- **Máximo desempleo en España**: 26.1% (2013)
-- **Mínimo desempleo en España**: 8.2% (2007)
-- **Tendencia positiva**: Reducción constante desde 2014
-- **Brecha UE**: España tiene mayor volatilidad
-- **Empleo**: España por debajo de la media de la UE
-    """),
+Estructura de datos
+datos de Entrada
 
-    ("📁 Estructura de Datos", """
-**Datos de Entrada:**
-- Ámbito geográfico: España / Unión Europea
-- Periodo: Año (2006–2024)
-- Total: Tasa porcentual (con coma decimal)
+Ámbito geográfico : España / Unión Europea
+Periodo : Año (2006-2024)
+Total : Tasa porcentual (formato europeo con coma decimal)
 
-**Datos de Salida:**
-- Tasa_Empleo: float (punto decimal)
-- Tasa_Desempleo: float (punto decimal)
-    """),
+Datos de Salida
 
-    ("👥 Autor", """
-**Daniel**  
-Curso Data Analyst  
-Contacto: relojius@gmail.com  
-GitHub: [relojius](https://github.com/relojius)
-    """),
+Tasa_Empleo : Float (formato internacional con punto decimal)
+Tasa_Desempleo : Float (formato internacional con punto decimal)
 
-    ("📄 Licencia", """
-Este proyecto está bajo la Licencia MIT.
+Autor
+Daniel - https://github.com/relojius
+Licencia
+Este proyecto está bajo la Licencia MIT - ver el archivo LICENSE para más detalles.
+Soporte
+Si tienes preguntas o encuentras algún problema:
 
-Puedes usar, modificar y distribuir este código libremente.
-    """)
-]
-
-for title, content in sections:
-    doc.add_heading(title, level=1)
-    p = doc.add_paragraph()
-    for line in content.strip().split('\n'):
-        line = line.strip()
-        if line.startswith('- ') or line.startswith('* '):
-            doc.add_paragraph(line, style='List Bullet')
-        elif line.startswith('#') or line.startswith('```'):
-            doc.add_paragraph(line, style='Code')
-        else:
-            if line:
-                doc.add_paragraph(line)
-
-# Añadir nota final
-doc.add_page_break()
-note = doc.add_paragraph()
-note.add_run("✅ Documento generado automáticamente").bold = True
-note.alignment = WD_ALIGN_PARAGRAPH.CENTER
-
-# === Guardar el archivo ===
-output_path = 'README.docx'
-doc.save(output_path)
-
-print(f"✅ Archivo '{output_path}' creado con éxito en la carpeta actual.")
-print("➡️ Puedes editarlo con Word y subirlo a GitHub.")
+Contacto: relojius@gmail.com
