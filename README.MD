@@ -37,8 +37,8 @@ print("Puedes editarlo con Word y subirlo a GitHub.")
 - **Seaborn**: Visualizaciones estadísticas
 ##  Instalación y Uso
 
-1. Clonar el repositorio
 ```bash
+1. Clonar el repositorio
 git clone https://github.com/relojius/proyecto_final.git
 cd empleo-desempleo-espana-ue
 2. Crear entorno virtual
