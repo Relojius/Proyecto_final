@@ -1,8 +1,8 @@
-# 📊 Análisis de Tasas de Empleo y Desempleo: España vs Unión Europea (2006-2024)
+# Análisis de Tasas de Empleo y Desempleo: España vs Unión Europea (2006-2024)
 
 Este proyecto realiza un análisis comparativo de las tasas de empleo y desempleo entre España y la Unión Europea desde 2006 hasta 2024, utilizando Python para el procesamiento de datos y la visualización.
 
-## 📁 Estructura del Proyecto
+## Estructura del Proyecto
 
 
 print(f"Archivo '{output_path}' creado con éxito en la carpeta actual.")
@@ -37,18 +37,18 @@ print("Puedes editarlo con Word y subirlo a GitHub.")
 - **Seaborn**: Visualizaciones estadísticas
 ##  Instalación y Uso
 
-### 1. Clonar el repositorio
+1. Clonar el repositorio
 ```bash
 git clone https://github.com/relojius/proyecto_final.git
 cd empleo-desempleo-espana-ue
-### 2. Crear entorno virtual
+2. Crear entorno virtual
 python -m venv venv
 venv\Scripts\activate     # Windows
-### 3. Isntalar dependencias
+3. Isntalar dependencias
 pip install -r requirements.txt
-### 4. Realizar análisis de datos obtenidos
+4. Realizar análisis de datos obtenidos
 Con el el programa visual studio y a partir de un código generado por pandas, numpy y otras librerias.
-### Requisitos de sistema
+Requisitos de sistema
 pandas>=1.3.0
 numpy>=1.21.0
 matplotlib>=3.4.0
