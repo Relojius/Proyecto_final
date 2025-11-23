@@ -13,7 +13,7 @@ Proyecto-final/
 │   ├── Tasa de empleo.csv          # Datos de tasa de empleo
 │   └── Tasa de desempleo.csv       # Datos de tasa de desempleo
 │
-├── analisis_empleo_desempleo.py    # Script principal de análisis
+├── Proyecto_final.ipynb    # Script principal de análisis
 ├── datos_combinados_empleo_desempleo.csv  # Output: Datos combinados
 ├── resumen_analisis.txt            # Output: Resumen estadístico
 ├── requirements.txt                # Dependencias del proyecto
